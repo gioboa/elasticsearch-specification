@@ -4248,7 +4248,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -12868,7 +12869,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -13329,7 +13331,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -15628,7 +15631,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -15876,7 +15880,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -16738,7 +16743,7 @@
           {
             "in": "path",
             "name": "index",
-            "description": "The name of the index to explain",
+            "description": "Comma-separated list of index names to explain",
             "required": true,
             "deprecated": false,
             "schema": {
@@ -20581,7 +20586,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -20961,7 +20967,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -21096,7 +21103,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -21221,7 +21229,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -21361,7 +21370,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -21480,7 +21490,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -21610,7 +21621,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -21735,7 +21747,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -21865,7 +21878,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -21985,7 +21999,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -22115,7 +22130,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -22220,7 +22236,8 @@
                 ]
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -22365,7 +22382,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -22488,7 +22506,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -22607,7 +22626,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -22732,7 +22752,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -22857,7 +22878,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -22982,7 +23004,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -23101,7 +23124,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -23212,7 +23236,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -23337,7 +23362,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -23462,7 +23488,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -23562,7 +23589,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -23672,7 +23700,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -23783,7 +23812,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -23885,7 +23915,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -23983,7 +24014,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -35432,7 +35464,7 @@
             }
           }
         },
-        "x-state": "Technical preview",
+        "x-state": "Generally available",
         "x-metaTags": [
           {
             "content": "Elasticsearch",
@@ -45410,7 +45442,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -138009,7 +138042,7 @@
       "eql.search-index": {
         "in": "path",
         "name": "index",
-        "description": "The name of the index to scope the operation",
+        "description": "Comma-separated list of index names to scope the operation",
         "required": true,
         "deprecated": false,
         "schema": {
@@ -146568,7 +146601,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "graph.explore": {
         "content": {
@@ -146616,7 +146650,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "index": {
         "content": {
@@ -146744,7 +146779,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "indices.clone": {
         "content": {
@@ -147222,7 +147258,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "indices.simulate_template": {
         "content": {
@@ -147336,7 +147373,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "indices.validate_query": {
         "content": {
@@ -147399,7 +147437,8 @@
               ]
             }
           }
-        }
+        },
+        "required": true
       },
       "inference.put": {
         "content": {
@@ -148230,7 +148269,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "rollup.rollup_search": {
         "content": {
@@ -148326,7 +148366,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "scroll": {
         "content": {
@@ -150054,7 +150095,8 @@
               }
             }
           }
-        }
+        },
+        "required": true
       },
       "termvectors": {
         "content": {

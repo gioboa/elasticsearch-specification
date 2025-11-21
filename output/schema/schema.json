@@ -646,6 +646,38 @@
     },
     {
       "availability": {
+        "stack": {
+          "stability": "stable",
+          "visibility": "public"
+        }
+      },
+      "description": "Get circuit breakers statistics",
+      "docUrl": "https://www.elastic.co/docs/api/doc/elasticsearch#TODO",
+      "name": "cat.circuit_breaker",
+      "request": null,
+      "requestBodyRequired": false,
+      "response": null,
+      "responseMediaType": [
+        "text/plain",
+        "application/json"
+      ],
+      "urls": [
+        {
+          "methods": [
+            "GET"
+          ],
+          "path": "/_cat/circuit_breaker"
+        },
+        {
+          "methods": [
+            "GET"
+          ],
+          "path": "/_cat/circuit_breaker/{circuit_breaker_patterns}"
+        }
+      ]
+    },
+    {
+      "availability": {
         "serverless": {
           "stability": "stable",
           "visibility": "public"
@@ -2344,7 +2376,7 @@
         "name": "Request",
         "namespace": "_global.close_point_in_time"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -5769,7 +5801,7 @@
         "name": "Request",
         "namespace": "fleet.search"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -6015,7 +6047,7 @@
         "name": "Request",
         "namespace": "graph.explore"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -6298,7 +6330,7 @@
         "name": "Request",
         "namespace": "ilm.move_to_step"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -6344,7 +6376,7 @@
         "name": "Request",
         "namespace": "ilm.put_lifecycle"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -6632,7 +6664,7 @@
         "name": "Request",
         "namespace": "indices.analyze"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -7260,6 +7292,35 @@
     {
       "availability": {
         "stack": {
+          "featureFlag": "random_sampling",
+          "stability": "experimental",
+          "visibility": "feature_flag"
+        }
+      },
+      "description": "Delete sampling configuration for an index or data stream",
+      "docUrl": "https://www.elastic.co/docs/api/doc/elasticsearch#TODO",
+      "name": "indices.delete_sample_configuration",
+      "request": null,
+      "requestBodyRequired": false,
+      "requestMediaType": [
+        "application/json"
+      ],
+      "response": null,
+      "responseMediaType": [
+        "application/json"
+      ],
+      "urls": [
+        {
+          "methods": [
+            "DELETE"
+          ],
+          "path": "/{index}/_sample/config"
+        }
+      ]
+    },
+    {
+      "availability": {
+        "stack": {
           "stability": "stable"
         }
       },
@@ -7819,6 +7880,32 @@
     },
     {
       "availability": {
+        "stack": {
+          "featureFlag": "random_sampling",
+          "stability": "experimental",
+          "visibility": "feature_flag"
+        }
+      },
+      "description": "Get sampling configurations for all indices and data streams",
+      "docUrl": "https://www.elastic.co/docs/api/doc/elasticsearch#TODO",
+      "name": "indices.get_all_sample_configuration",
+      "request": null,
+      "requestBodyRequired": false,
+      "response": null,
+      "responseMediaType": [
+        "application/json"
+      ],
+      "urls": [
+        {
+          "methods": [
+            "GET"
+          ],
+          "path": "/_sample/config"
+        }
+      ]
+    },
+    {
+      "availability": {
         "serverless": {
           "stability": "stable",
           "visibility": "public"
@@ -8251,6 +8338,84 @@
     },
     {
       "availability": {
+        "stack": {
+          "featureFlag": "random_sampling",
+          "stability": "experimental",
+          "visibility": "feature_flag"
+        }
+      },
+      "description": "Get random sample of ingested data",
+      "docUrl": "https://www.elastic.co/docs/api/doc/elasticsearch#TODO",
+      "name": "indices.get_sample",
+      "request": null,
+      "requestBodyRequired": false,
+      "response": null,
+      "responseMediaType": [
+        "application/json"
+      ],
+      "urls": [
+        {
+          "methods": [
+            "GET"
+          ],
+          "path": "/{index}/_sample"
+        }
+      ]
+    },
+    {
+      "availability": {
+        "stack": {
+          "featureFlag": "random_sampling",
+          "stability": "experimental",
+          "visibility": "feature_flag"
+        }
+      },
+      "description": "Get sampling configuration for an index or data stream",
+      "docUrl": "https://www.elastic.co/docs/api/doc/elasticsearch#TODO",
+      "name": "indices.get_sample_configuration",
+      "request": null,
+      "requestBodyRequired": false,
+      "response": null,
+      "responseMediaType": [
+        "application/json"
+      ],
+      "urls": [
+        {
+          "methods": [
+            "GET"
+          ],
+          "path": "/{index}/_sample/config"
+        }
+      ]
+    },
+    {
+      "availability": {
+        "stack": {
+          "featureFlag": "random_sampling",
+          "stability": "experimental",
+          "visibility": "feature_flag"
+        }
+      },
+      "description": "Get stats about a random sample of ingested data",
+      "docUrl": "https://www.elastic.co/docs/api/doc/elasticsearch#TODO",
+      "name": "indices.get_sample_stats",
+      "request": null,
+      "requestBodyRequired": false,
+      "response": null,
+      "responseMediaType": [
+        "application/json"
+      ],
+      "urls": [
+        {
+          "methods": [
+            "GET"
+          ],
+          "path": "/{index}/_sample/stats"
+        }
+      ]
+    },
+    {
+      "availability": {
         "serverless": {
           "stability": "stable",
           "visibility": "public"
@@ -8625,7 +8790,7 @@
         "name": "Request",
         "namespace": "indices.put_data_lifecycle"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -8708,7 +8873,7 @@
         "name": "Request",
         "namespace": "indices.put_data_stream_options"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -8861,6 +9026,35 @@
             "POST"
           ],
           "path": "/{index}/_mapping"
+        }
+      ]
+    },
+    {
+      "availability": {
+        "stack": {
+          "featureFlag": "random_sampling",
+          "stability": "experimental",
+          "visibility": "feature_flag"
+        }
+      },
+      "description": "Configure sampling for an index or data stream",
+      "docUrl": "https://www.elastic.co/docs/api/doc/elasticsearch#TODO",
+      "name": "indices.put_sample_configuration",
+      "request": null,
+      "requestBodyRequired": true,
+      "requestMediaType": [
+        "application/json"
+      ],
+      "response": null,
+      "responseMediaType": [
+        "application/json"
+      ],
+      "urls": [
+        {
+          "methods": [
+            "PUT"
+          ],
+          "path": "/{index}/_sample/config"
         }
       ]
     },
@@ -9390,7 +9584,7 @@
         "name": "Request",
         "namespace": "indices.shrink"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -9527,7 +9721,7 @@
         "name": "Request",
         "namespace": "indices.split"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -9757,7 +9951,7 @@
         "name": "Request",
         "namespace": "inference.completion"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -9897,7 +10091,7 @@
         "name": "Request",
         "namespace": "inference.inference"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10000,7 +10194,7 @@
         "name": "Request",
         "namespace": "inference.put_ai21"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10046,7 +10240,7 @@
         "name": "Request",
         "namespace": "inference.put_alibabacloud"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10092,7 +10286,7 @@
         "name": "Request",
         "namespace": "inference.put_amazonbedrock"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10138,7 +10332,7 @@
         "name": "Request",
         "namespace": "inference.put_amazonsagemaker"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10184,7 +10378,7 @@
         "name": "Request",
         "namespace": "inference.put_anthropic"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10230,7 +10424,7 @@
         "name": "Request",
         "namespace": "inference.put_azureaistudio"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10276,7 +10470,7 @@
         "name": "Request",
         "namespace": "inference.put_azureopenai"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10322,7 +10516,7 @@
         "name": "Request",
         "namespace": "inference.put_cohere"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10367,7 +10561,7 @@
         "name": "Request",
         "namespace": "inference.put_contextualai"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10413,7 +10607,7 @@
         "name": "Request",
         "namespace": "inference.put_custom"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10459,7 +10653,7 @@
         "name": "Request",
         "namespace": "inference.put_deepseek"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10505,7 +10699,7 @@
         "name": "Request",
         "namespace": "inference.put_elasticsearch"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10555,7 +10749,7 @@
         "name": "Request",
         "namespace": "inference.put_elser"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10601,7 +10795,7 @@
         "name": "Request",
         "namespace": "inference.put_googleaistudio"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10647,7 +10841,7 @@
         "name": "Request",
         "namespace": "inference.put_googlevertexai"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10693,7 +10887,7 @@
         "name": "Request",
         "namespace": "inference.put_hugging_face"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10738,7 +10932,7 @@
         "name": "Request",
         "namespace": "inference.put_jinaai"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10783,7 +10977,7 @@
         "name": "Request",
         "namespace": "inference.put_llama"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10829,7 +11023,7 @@
         "name": "Request",
         "namespace": "inference.put_mistral"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10875,7 +11069,7 @@
         "name": "Request",
         "namespace": "inference.put_openai"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10892,6 +11086,34 @@
             "PUT"
           ],
           "path": "/_inference/{task_type}/{openai_inference_id}"
+        }
+      ]
+    },
+    {
+      "availability": {
+        "stack": {
+          "stability": "stable",
+          "visibility": "public"
+        }
+      },
+      "description": "Create an OpenShift AI inference endpoint",
+      "docUrl": "https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-inference-put-openshift-ai",
+      "name": "inference.put_openshift_ai",
+      "request": null,
+      "requestBodyRequired": true,
+      "requestMediaType": [
+        "application/json"
+      ],
+      "response": null,
+      "responseMediaType": [
+        "application/json"
+      ],
+      "urls": [
+        {
+          "methods": [
+            "PUT"
+          ],
+          "path": "/_inference/{task_type}/{openshiftai_inference_id}"
         }
       ]
     },
@@ -10920,7 +11142,7 @@
         "name": "Request",
         "namespace": "inference.put_voyageai"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10966,7 +11188,7 @@
         "name": "Request",
         "namespace": "inference.put_watsonx"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -11012,7 +11234,7 @@
         "name": "Request",
         "namespace": "inference.rerank"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -11053,7 +11275,7 @@
         "name": "Request",
         "namespace": "inference.sparse_embedding"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -11095,7 +11317,7 @@
         "name": "Request",
         "namespace": "inference.stream_completion"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -11136,7 +11358,7 @@
         "name": "Request",
         "namespace": "inference.text_embedding"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -11757,7 +11979,7 @@
       "docUrl": null,
       "name": "knn_search",
       "request": null,
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -16564,7 +16786,7 @@
           "visibility": "public"
         },
         "stack": {
-          "stability": "experimental",
+          "stability": "stable",
           "visibility": "public"
         }
       },
@@ -17185,7 +17407,7 @@
         "name": "Request",
         "namespace": "_global.render_search_template"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -17586,7 +17808,7 @@
         "name": "Request",
         "namespace": "_global.scripts_painless_execute"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -21769,7 +21991,7 @@
         "name": "Request",
         "namespace": "slm.put_lifecycle"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -23320,7 +23542,7 @@
         "name": "Request",
         "namespace": "_global.terms_enum"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -139371,7 +139593,7 @@
       },
       "path": [
         {
-          "description": "The name of the index to scope the operation",
+          "description": "Comma-separated list of index names to scope the operation",
           "name": "index",
           "required": true,
           "type": {
@@ -155991,7 +156213,7 @@
       },
       "path": [
         {
-          "description": "The name of the index to explain",
+          "description": "Comma-separated list of index names to explain",
           "name": "index",
           "required": true,
           "type": {
@@ -218500,7 +218722,6 @@
             "description": "",
             "version": "7.0.0"
           },
-          "description": "Default document type for items which don't provide one",
           "name": "type",
           "required": false,
           "type": {
@@ -249588,7 +249809,7 @@
       },
       "path": [
         {
-          "description": "Which node for which to retrieve the shutdown status",
+          "description": "Comma-separated list of nodes for which to retrieve the shutdown status",
           "name": "node_id",
           "required": false,
           "type": {
